@@ -1,0 +1,94 @@
+header
+    +size(100% 45px)
+    z-index: 3
+    +display(flex)
+    +justify-content(center)
+    +position(absolute, 0 null null 0)
+            
+    nav
+        width: 500px
+        border-radius: 0 0 50px 50px
+        border-left: 2px solid rgba(white, .9)
+        border-right: 2px solid rgba(white, .9)
+        overflow: hidden
+        +background(radial-gradient( circle at 50% 50%, transparent 80%, rgba(#000, 1)))
+        
+        &.nav-even
+            +background(radial-gradient(circle at 50% 50%, transparent 80%, #45b773))
+            
+        &.nav-odd
+            +background(radial-gradient(circle at 50% 50%, transparent 80%, #208ba2))
+        
+        .nav-top
+            +size(100% 35px)
+            margin: 5px 0 
+            padding: 0 10%
+            list-style-type: none
+            +display(flex)
+            +flex-wrap(nowrap)
+            +justify-content(space-around)
+            +background(radial-gradient( circle at 50% 50%, rgba(black, .2) 80%, transparent))
+            +transition()
+            
+            border: 1px solid white
+                image: linear-gradient(to left, rgba(black, .1) 1%, rgba(white, .9) 50%, rgba(black, .1) 100%) 100% 0 100% 0/1px 0 1px 0 stretch
+            
+            &.active-nav-bottom
+                margin-top: -35px
+                
+            li
+                color: rgba(white, .7)
+                line-height: 2.2
+                cursor: pointer
+                text-align: center
+                overflow: hidden
+                text-transform: uppercase
+                text-decoration: none
+                letter-spacing: 1.5px
+                text-shadow: 0px 0px 1px rgba(white, .2)
+                +display(block)
+                +transition(200ms)
+                font:
+                    size: 16px
+                    
+                &:hover
+                    color: rgba(white, 1)
+                    text-shadow: 0px 0px 1px rgba(white, .5)  
+                    
+                @media screen and (max-width: 375px)
+                    font-size: 13px     
+                    line-height: 2.6
+                
+        .nav-bottom
+            +size(100% 34px)
+            padding: 10px 0 0 0
+            opacity: .7
+            cursor: pointer
+            +display(flex)
+            +flex-wrap(wrap)
+            +justify-content(center)
+            +transition()
+            
+            &:hover
+                opacity: 1
+            
+            hr                
+                padding: 0
+                margin: 0
+                width: 80%
+                border-color: white
+                box-shadow: 0px 2px 3px 0px rgba(black, .9)
+                +display(block)
+                
+                &:nth-child(1)
+                    width: 40.1%
+                    margin: 0 -1px 3px 0
+                    border-radius: 5px 0 0 5px
+                    +transform(rotate(-2deg))
+                
+                &:nth-child(2)
+                    width: 40.1%
+                    margin: 0 0 3px -1px
+                    border-radius: 0 5px 5px 0
+                    +transform(rotate(2deg))
+                        

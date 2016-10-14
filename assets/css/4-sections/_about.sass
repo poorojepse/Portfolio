@@ -1,0 +1,100 @@
+#about
+    @extend %parent-container
+    
+    .page-title
+        @extend %page-title
+
+    .wrapper
+        @extend %wrapper
+        +display(block)
+        border: 1px solid white
+            image: linear-gradient(to bottom, rgba(black, .1) 1%, rgba(white, .9) 50%, rgba(black, .1) 100%) 0 100% 0 100%/ 0 1px 0 1px stretch
+
+        .about-content
+            +size(100% 140%)
+            padding: 10px 30px
+            +display(flex)
+        
+            .about-avatar
+                margin: 0
+                width: 30%
+                opacity: 1
+                z-index: -1
+
+                img 
+                    left: 0
+                    width: 500px
+                    +position(absolute, 0 0 0 -78px)
+
+            .about-blurb
+                width: 70%
+                margin: 0
+                padding: 0
+                color: #38cf94
+                z-index: 0
+                line-height: 1.8
+                text-align: right
+                text-shadow: 1px 2px 7px rgba(black, .9)
+                font:
+                    size: 15px
+    
+                @media screen and (max-width: 1120px)
+                    padding-left: 15%
+                    
+                .left
+                    float: left
+                    
+                    ~ *
+                        line-height: 1
+                        color: white
+                        font:
+                            weight: 700                
+                .name
+                    font-size: 30px                        
+     
+                .goal
+                    font-size: 24px
+                    
+                .mot
+                    font-size: 18px
+                    
+    @media screen and (max-width: 815px)
+        .wrapper
+            
+            .about-content
+                +display(block)
+
+                .about-avatar
+                    min-width: 150px
+                    margin: 0 auto
+                        
+                    img
+                        +size(100%)
+                        border: 1px solid rgba(white, .3)
+                        padding: 4px
+                        border-radius: 100%
+                        +position(static)
+
+                .about-blurb
+                    width: 100%
+                    padding: 2px 0 0 0
+                    text-align: center
+                    line-height: 1.4
+
+                    .left, .name, .goal, .mot
+                        float: none
+                        font:
+                            size: inherit
+                            
+    @media screen and (max-width: 450px)
+        .wrapper
+            .about-content
+                overflow-x: hidden
+                
+                .about-blurb
+                    line-height: 1.3
+                    
+    @media screen and (max-height: 550px)
+        .wrapper
+            .about-content
+                overflow-x: hidden

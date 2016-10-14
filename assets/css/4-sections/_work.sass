@@ -1,0 +1,327 @@
+#work
+    @extend %parent-container
+    
+    .page-title        
+        @extend %page-title
+        
+    .wrapper
+        @extend %wrapper
+        +display(block)      
+        
+        &.enable-wrapper
+            height: 60%
+            
+            .work-thumb
+                height: 25%
+                +flex-wrap(nowrap)
+                
+                .work-thumb-content
+                    height: 100%
+                    
+            .work-content
+                +display(flex)
+                    
+                    
+        .work-thumb
+            +size(100%)
+            padding: 0 15px
+            margin-bottom: 3%
+            +display(flex)
+            +flex-wrap(wrap)
+            +justify-content(center)
+            +position(relative)
+            +transition()
+                        
+            .work-thumb-content
+                opacity: .4
+                flex: 1 1 32%
+                height: 100%
+                margin: .5%
+                border-radius: 5px
+                border-right: 1px solid rgba(black, .5)
+                border-bottom: 1px solid rgba(black, .5)
+                box-shadow: 0px 0px 5px 3px rgba(black, .2)
+                +position(relative)
+                +transition(200ms)
+                                                                                            
+                &:hover
+                    opacity: 1
+                
+                    .work-thumb-content-overlay
+                        opacity: .8
+                        @extend %bounceOut
+                        
+                &:before
+                    @extend %box-shadow-before
+                    
+                &:after
+                    @extend %box-shadow-after
+                
+                &.enable-work-thumb-content
+                    opacity: 1
+                    
+                &.active-work
+                    opacity: 1
+                    z-index: 5
+                    margin: .5% 3%
+                    +transform(scale(1.2))
+                    
+                    .work-thumb-content-overlay
+                        opacity: 1
+                        @extend %bounceOut
+                        
+                        &:hover
+                            background-color: rgba(black, .45)
+                                                                            
+                    
+                .work-thumb-content-overlay
+                    opacity: 0
+                    border-radius: 5px
+                    padding: 5px
+                    +display(flex)
+                    +justify-content(center)
+                    +align-items(center)
+                    +position(absolute, 0 0 0 0)
+                    background-color: rgba(black, .4)
+                    +transition()
+                                    
+                    .work-thumb-content-overlay-title
+                        padding-top: 5%
+                        text-align: center
+                        line-height: 1
+                        font-size: 24px
+                        margin: 0
+                                        
+                    @media screen and (max-width: 450px), screen and (max-height: 450px)
+                        .work-thumb-content-overlay-title
+                            font-size: 14px
+
+                    @media screen and (max-width: 350px)
+                        .work-thumb-content-overlay-title
+                            font-size: 11px
+                    
+                
+                .work-thumb-menu
+                    height: 10%
+                    border-bottom: 1px solid darken(#a3a3a3, 5)
+                    border-radius: 6px 6px 0 0 
+                    +display(flex)
+                    +align-items(center)
+                        
+                    background:
+                        color: #e4dedb
+                        image: linear-gradient(#e4dedb, #b1b1b1)
+                    
+                    .work-thumb-menu-button
+                        height: 1%
+                        padding: 1%
+                        margin: 0 0 0 1%
+                        border-radius: 50%
+                        border: .7px solid rgba(black, .5)
+                        box-shadow: inset 0px 1px 4px .1px rgba(black, .5)
+
+                        &:nth-child(1)
+                            margin-left: 3%
+                            background:
+                                color: red
+                                image: linear-gradient(white, red 50%, white)
+
+                        &:nth-child(2)
+                            background:
+                                color: yellow
+                                image: linear-gradient(white, yellow 50%, white)
+
+                        &:nth-child(3)
+                            background:
+                                color: green
+                                image: linear-gradient(white, green 50%, white)
+                    
+                .work-thumb-img
+                    border-radius: 0 0 6px 6px
+                    height: 90%
+                    +display(block)
+                        
+                    background:
+                        size: cover
+                        position: top center
+                        repeat: no-repeat    
+        
+        .work-content
+            +size(100% 75%)
+            +display(none)
+            +justify-content(center)
+                                        
+            .work-belt
+                +size(100% 75%)
+                +display(flex)
+                +justify-content(center)
+                +position(absolute, null null null 0)
+                
+                > span
+                    +size(10px 90px)
+                    background-color: rgba(black, .5)
+                    +transition(1s)
+                        
+                    &:before
+                        content: ""
+                        +size(30px 100%)
+                        +display(block)
+                        border-top: 30px solid transparent
+                        border-bottom: 30px solid transparent
+                        
+                    &:after
+                        content: ""
+                        +size(10px)
+                        +display(block)
+                        margin-top: -5px
+                        border-top: 5px solid transparent
+                        border-bottom: 5px solid transparent
+                        +transition()
+                
+                .work-belt-prev
+                    border-radius: 0 5px 5px 0
+                    +position(relative, 20% 44% null null)
+
+                    &:before
+                        +position(absolute, null 10px null null)
+                        border-radius: 100% 0 0 100%
+                        border-right: 30px solid rgba(black, .5)
+
+                    &:after
+                        +position(absolute, 50% 18px null null)
+                        border-right: 10px solid rgba(white, .6)
+                    
+                    &:hover
+                        +background(linear-gradient(to left, rgba(black, .3), transparent 60%) rgba(black, .5))
+                        
+                        &:after
+                            border-right-color: rgba(yellow, .6)
+
+                .work-belt-next
+                    border-radius: 5px 0 0 5px
+                    +position(relative, 20% null null 44%)
+
+                    &:before
+                        +position(absolute, null null null 10px)
+                        border-radius: 0 100% 100% 0
+                        border-left: 30px solid rgba(black, .5)
+
+                    &:after
+                        +position(absolute, 50% null null 18px)
+                        border-left: 10px solid rgba(white, .6)
+                    
+                    &:hover
+                        +background(linear-gradient(to right, rgba(black, .3), transparent 60%) rgba(black, .5))
+                        
+                        &:after
+                            border-left-color: rgba(yellow, .6)
+
+            .work-focus
+                +size(86% 100%)
+                padding: 10px
+                border-radius: 5px
+                background-color: rgba(black, .5)
+                box-shadow: inset 0px 0px 40px 5px rgba(black, .4)
+                +display(flex)
+                +justify-content(center)
+                +position(relative)
+
+                .work-focus-content
+                    +size(100%)
+                    padding: 0 3px
+                    +display(none)
+
+                    &.active-work
+                        +display(block)
+
+                    .work-focus-img
+                        width: 30%
+                        min-width: 130px
+                        margin: 0 10px 10px 0
+                        float: left
+                        border: 1px solid darken(white, 20)
+                        background-color: pink
+                        +transition(1.5s)
+
+                    .work-focus-title
+                        margin: 0
+                        line-height: 1.4
+                        padding: 5px 0
+                        text-transform: uppercase
+                        letter-spacing: 2px
+                        +transition()
+
+                    .work-focus-desc
+                        margin: 0
+                        color: lighten(#38cf94,20)
+                        line-height: 1.3
+                    
+                        
+        @media screen and (max-width: 850px)
+            .work-thumb
+                margin-bottom: 5%
+                
+                .work-thumb-content
+                    height: 48%
+                    
+        @media screen and (max-width: 450px)
+            .work-content
+                
+                .work-belt
+                    .work-belt-prev, .work-belt-next
+                        +transform(scale(0.8))     
+
+                .work-focus
+                    .work-focus-content
+                        overflow-x: hidden
+
+                        .work-focus-img
+                            width: 100%
+                            float: none
+                            +display(block)
+                            margin: 0 auto 5px
+
+                        .work-focus-title
+                            font-size: 15px
+                            text-align: center
+                            line-height: 1.3
+
+                        .work-focus-desc
+                            margin: 0
+                            font-size: 13px
+                            text-align: center     
+                                    
+        @media screen and (max-height: 550px)
+            .work-thumb
+                margin-bottom: 5%
+            
+                .work-thumb-content
+                    height: 48%
+                    
+            .work-content
+                    
+                .work-belt
+                    .work-belt-prev, .work-belt-next
+                        +transform(scale(0.8))  
+                            
+                .work-focus
+                    .work-focus-content
+                        overflow-x: hidden
+
+                        .work-focus-img
+                            width: 30%
+                            min-width: 90px
+                            margin: 0 auto 10px
+                            float: none
+                            +display(block)
+
+                        .work-focus-title
+                            font-size: 15px
+                            text-align: center
+                            line-height: 1.3
+
+                        .work-focus-desc
+                            margin: 0
+                            font-size: 13px
+                            text-align: center
+

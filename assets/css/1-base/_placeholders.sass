@@ -1,0 +1,54 @@
+%parent-container
+    +size(100%)
+    opacity: 0
+    pointer-events: none
+    +display(flex)
+    +flex-direction(column)
+    +justify-content(center)
+    +position(absolute)
+    +transform(skewX(25deg))
+    +transition(550ms)
+    +transition(opacity 200ms ease-in 0s)
+        
+    &.active-page
+        opacity: 1
+        pointer-events: auto
+        
+%page-title
+    +size(80% 10%)
+    margin: 0
+    +position(relative, null null null 10%)
+    h3
+        margin: 0
+        padding: 0
+        text-align: center
+        letter-spacing: 3px
+        line-height: 1
+        text-align: center
+        text-transform: uppercase
+        
+%wrapper
+    +size(80% 40%)
+    padding: 0
+    +align-items(center)
+    +display(flex)
+    +flex-direction(column)
+    +justify-content(flex-start)
+    +position(relative, null null null 10%)
+    
+%box-shadow-before
+    content: ""
+    background-color: rgba(black, .5)
+    box-shadow: 2px 0px 4px 3px rgba(black, .5)
+    z-index: -1
+    +position(absolute, 10px 3px 0 3px)
+    +transform(skewY(2.5deg))
+    
+%box-shadow-after
+    content: ""
+    background-color: rgba(black, .5)
+    box-shadow: -2px 0px 4px 3px rgba(black, .5)
+    z-index: -1
+    +position(absolute, 10px 3px 0 3px)
+    +transform(skewY(-2.5deg))
+    

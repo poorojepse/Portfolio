@@ -1,0 +1,102 @@
+#form
+    @extend %parent-container
+        
+    .page-title
+        @extend %page-title
+        width: 80%
+        margin: 0
+        left: 10%
+                
+        h3
+            font-size: 18px
+            line-height: 1.4
+            
+            @media screen and (max-width: 550px)
+                font-size: 14px                
+        
+    .wrapper
+        @extend %wrapper      
+        +display(block)
+    
+        form
+            +size(100% 140%)
+            overflow-x: hidden
+            margin: 10px auto 0
+            padding: 0 7px
+            max-width: 410px
+            
+            span
+                color: white
+                letter-spacing: 1.8px
+                text-shadow: 1px 2px 3px rgba(black, .9)
+                line-height: 1
+                
+                @media screen and (max-width: 375px)
+                    font-size: 13px
+
+            input, textarea
+                color: #208ba2
+                letter-spacing: 1.8px
+                margin-top: 2px
+                padding: 7px 10px
+                border: 2px solid #b5845e
+                
+                &:autofill
+                    background: white
+
+            .contact-info-group
+                width: 100%
+                padding-bottom: 15px
+                +display(flex)
+                +justify-content(space-between)
+
+                label
+                    width: 49%
+
+                    input
+                        width: 100%
+
+            textarea
+                +size(100% 13em)
+                margin-bottom: 5px
+                resize: none
+                +transition(800ms)
+                    
+                @media screen and (max-width: 500px)
+                    height: 7em
+                
+            .submit-wrap
+                text-align: right
+                
+                @media screen and (max-width: 680px)
+                    text-align: left
+
+                [type="submit"]
+                    color: white
+                    border: 0
+                    background: $form-border
+                    line-height: 1.6
+                    text-transform: uppercase
+                    letter-spacing: 4
+                    border: 2px solid transparent
+                    font:
+                        size: 15px
+    
+                    @media screen and (max-width: 375px)
+                        font-size: 13px
+                
+                    &:hover
+                        color: $form-border
+                        background: white
+                        border: 2px solid #b4845e
+                    
+    @media screen and (max-width: 500px)
+        .wrapper
+            form
+                .contact-info-group
+                    padding: 0
+                    +flex-wrap(wrap)
+                    label
+                        width: 100%
+                        margin-bottom: 10px
+                        
