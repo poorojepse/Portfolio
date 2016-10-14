@@ -289,7 +289,14 @@
                         .work-focus-desc
                             margin: 0
                             font-size: 13px
-                            text-align: center     
+                            text-align: center    
+                            
+        @media screen and (max-height: 700px)
+            .work-content
+                .work-belt
+                    > span
+                        top: 10%
+                        +transform(scale(0.8))                      
                                     
         @media screen and (max-height: 550px)
             .work-thumb
@@ -298,12 +305,6 @@
                 .work-thumb-content
                     height: 48%
                     
-            .work-content
-                    
-                .work-belt
-                    .work-belt-prev, .work-belt-next
-                        +transform(scale(0.8))  
-                            
                 .work-focus
                     .work-focus-content
                         overflow-x: hidden
