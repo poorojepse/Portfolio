@@ -1,0 +1,19 @@
+<section class="page" id="about">
+    
+    <span class="page-title"><h3>About Me</h3></span>
+    
+    <section class="wrapper">
+        <section class="about-content">
+            {% for content in site.data.settings.about %}
+
+                <figure class="about-avatar">
+                    <img src="{{site.baseurl}}/assets/img/{{ content.hero }}.png" />
+                </figure>
+            
+                <p class="about-blurb">{{ content.blurb }}</p>
+            
+            {% endfor %}
+        </section>
+    </section>
+    
+</section>

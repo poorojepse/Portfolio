@@ -1,0 +1,46 @@
+title: Portfolio - Giod Dejepse
+description: freelancer, independent, hard-working
+email: poorojepse@gmail.com
+
+# SEO Section
+# NOTE: Providing SEO information will make this website more searchable on the internet.
+seo:
+  description: "I'm Giod Dejepse, I am newbie in this career and this is my first Portfolio design, please hire me and I'll promise to do my very best to finish the job. please help me and hire me."
+  rel-author: 'https://plus.google.com/u/0/+GiodDejepse/'
+  rel-publisher: 'https://plus.google.com/u/0/+GiodDejepse/'
+  
+
+about:
+- { hero: 'avatar', 
+    blurb: '<span class="left">Hi, my name is</span> <br><span class="name">Giod Dejepse,</span> Im trying my best to be a <span class="goal">freelancer.</span> I have been wanting to do my favorate hobbies, such as go out to fish and go swimming, but then I cannot do it for now, because Im busy in my work. Less bounding with <span class="mot">friends</span> is a little bit lonely, but its ok. :)' }
+  
+  
+pages:
+- {name: 'about', url: 'about.html'}
+- {name: 'work', url: 'work.html'}
+- {name: 'contact', url: 'contact.html'}
+- {name: 'form', url: 'form.html'}
+
+
+works:
+- { name: My First Portfolio, 
+    description: 'This is my first design Portfolio. Being able to create my first design is made me feel so happy. At first, I did not expect that I come this far, i mean the design. for me.. Its so awesome. Coding seletors and javascript is so frustrating but its ok', img: 'work1'}
+- { name: Dummy Content, 
+    description: 'This is where my second work will be placed. This is a dummy content.' , img: 'work3'}
+- { name: Dummy Content, 
+    description: 'This is where my second work will be placed. This is a dummy content.' , img: 'work2'}
+
+
+social-links:
+- {link: "#", icon: 'twitter'}
+- {link: "#", icon: 'facebook'}
+- {link: "#", icon: 'github'}
+# - {link: "#", icon: 'pinterest'}
+# - {link: "#", icon: 'youtube'}
+# - {link: "#", icon: 'google-plus'}
+# - {link: "#", icon: 'linkedin'}
+# - {link: "#", icon: 'instagram'}
+# - {link: "#", icon: 'dribbble'}
+# - {link: "#", icon: 'behance'}
+# - {link: "#", icon: 'soundcloud'}
+# - {link: "#", icon: 'vine'}

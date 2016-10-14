@@ -1,0 +1,21 @@
+<section id="home"> 
+    
+{% include header.html %}
+    
+    <ul class="skews">
+        
+        {% for page in site.data.settings.pages %}
+            <li class="{{ page.name }}">
+                <span class="page-bg">
+                    {% include icon/{{ page.name }}.html %}
+                </span>
+                {% include {{ page.url }} %}
+                <a class="shadow"></a>
+            </li>
+        {% endfor %}    
+        
+    </ul>  
+    
+{% include footer.html %}
+    
+</section>

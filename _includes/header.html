@@ -1,0 +1,15 @@
+<header>
+    <nav>
+        <ul class="nav-top">
+            {% for page in site.data.settings.pages %}
+                    <li class="{{ page.name }}">{{ page.name }}</li>     
+            {% endfor %}
+        </ul>    
+        
+        <div class="nav-bottom">
+            {% for i in (1..4) %}
+                <hr>
+            {% endfor %}
+        </div>
+    </nav>
+</header>

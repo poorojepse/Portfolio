@@ -1,0 +1,44 @@
+<section class="page" id="work">
+    
+    <span class="page-title"><h3>Work</h3></span>
+    
+    <section class="wrapper">
+                
+        <section class="work-thumb">
+            {% for work in site.data.settings.works %}
+                <section class="work-thumb-content enable-work-thumb-content">
+                    <section class="work-thumb-content-overlay">
+                        <h3 class="work-thumb-content-overlay-title">{{work.name}}</h3>
+                    </section>
+                    <section class="work-thumb-menu">
+                        {% for i in (1..3) %}
+                            <hr class="work-thumb-menu-button">
+                        {% endfor %}
+                    </section>
+                    <span class="work-thumb-img" style="background-image: url({{site.baseurl}}/assets/img/work/{{work.img}}.jpg)"></span>
+                </section>
+            {% endfor %}
+        </section> 
+                
+        <section class="work-content">
+            <section class="work-belt">
+                <span class="work-belt-prev"></span>
+                <span class="work-belt-next"></span>
+            </section>
+
+            <section class="work-focus">            
+                {% for work in site.data.settings.works %}
+                    <section class="work-focus-content">
+                        <img class="work-focus-img" src="{{site.baseurl}}/assets/img/work/{{work.img}}.jpg" />
+                        <h3 class="work-focus-title">{{work.name}}</h3>
+                        <article>
+                            <p class="work-focus-desc">{{work.description}}</p>
+                        </article>
+                    </section>
+                {% endfor %}
+            </section> 
+        </section>
+        
+    </section>
+
+</section>

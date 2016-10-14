@@ -1,0 +1,18 @@
+<section class="page" id="contact">    
+    
+    <span class="page-title"><h3>Contact</h3></span> 
+    
+    <section class="wrapper">     
+        <a class="email" href="mailto:{{ site.data.settings.email }}">{{ site.data.settings.email }}</a>
+        <hr>
+        <article class="social-links">
+            {% for social in site.data.settings.social-links %}
+            
+                <a href="{{social.link}}" class="icon-{{ social.icon }}"></a>
+            
+            {% endfor %}
+        </article> 
+        
+    </section>
+    
+</section>
