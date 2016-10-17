@@ -1092,14 +1092,14 @@ header {
   #about .wrapper .about-content {
     height: 140%;
     width: 100%;
-    padding: 10px 30px;
     display: -webkit-box;
     display: -moz-box;
     display: box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    padding: 10px 30px; }
     #about .wrapper .about-content .about-avatar {
       margin: 0;
       width: 30%;
@@ -1505,10 +1505,8 @@ header {
           color: #8ae3c0;
           line-height: 1.3; }
   @media screen and (max-width: 850px) {
-    #work .wrapper .work-thumb {
-      margin-bottom: 5%; }
-      #work .wrapper .work-thumb .work-thumb-content {
-        height: 48%; } }
+    #work .wrapper .work-thumb .work-thumb-content {
+      height: 48%; } }
   @media screen and (max-width: 450px) {
     #work .wrapper .work-content .work-belt .work-belt-prev, #work .wrapper .work-content .work-belt .work-belt-next {
       -webkit-transform: scale(0.8);
@@ -1532,8 +1530,10 @@ header {
         font-size: 13px;
         text-align: center; } }
   @media screen and (max-height: 550px) {
-    #work .wrapper .work-thumb .work-thumb-content {
-      height: 48%; }
+    #work .wrapper .work-thumb {
+      margin-bottom: 2%; }
+      #work .wrapper .work-thumb .work-thumb-content {
+        height: 48%; }
     #work .wrapper .work-content {
       height: 70%; }
       #work .wrapper .work-content .work-belt {
@@ -1678,10 +1678,13 @@ header {
 #form .wrapper {
   display: block; }
   #form .wrapper form {
-    height: 140%;
-    width: 100%;
     overflow-x: hidden;
-    margin: 10px auto 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -40%;
+    left: 0;
+    margin: 14px auto 0;
     padding: 0 7px;
     max-width: 410px; }
     #form .wrapper form span {
